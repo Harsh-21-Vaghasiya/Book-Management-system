@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	// hello
 
 	if(isset($_GET['bcid']))
 	{
