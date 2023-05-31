@@ -8,9 +8,9 @@
 
 		$q="select * from book where b_id=".$_GET['bcid'];
 
-		$res=mysql_query($q,$link);
+		$res=mysqli_query($link,$q);
 
-		$row=mysql_fetch_assoc($res);
+		$row=mysqli_fetch_assoc($res);
 
 		$_SESSION['cart'][]=array("nm"=>$row['b_nm'],"img"=>$row['b_img'],"price"=>$row['b_price'],"qty"=>1);
 	}

@@ -24,9 +24,9 @@
 
 							$cat_q="select * from category order by cat_nm asc";
 
-							$cat_res=mysql_query($cat_q,$link);
+							$cat_res=mysqli_query($link,$cat_q);
 
-							while($cat_row=mysql_fetch_assoc($cat_res))
+							while($cat_row=mysqli_fetch_assoc($cat_res))
 							{
 								echo '<li><a href="book_list.php?id='.$cat_row['cat_id'].'&cat='.$cat_row['cat_nm'].'">'.$cat_row['cat_nm'].'</a></li>';
 							}

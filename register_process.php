@@ -34,7 +34,7 @@
 		{
 			$_SESSION['error']['email']="Please enter E-Mail Address";
 		}
-		else if(!ereg("^[a-z0-9_]+[a-z0-9_.]*@[a-z0-9_-]+[a-z0-9_.-]*\.[a-z]{2,5}$",$email))
+		else if(!preg_match("^[a-z0-9_]+[a-z0-9_.]*@[a-z0-9_-]+[a-z0-9_.-]*\.[a-z]{2,5}$",$email))
 		{
 			$_SESSION['error']['email']="Please Enter Valid E-Mail Address";
 		}
@@ -77,7 +77,7 @@
 
 			$q="insert into register(r_fnm,r_unm,r_pwd,r_cno,r_email,r_question,r_answer,r_time) values('$fnm','$unm','$pwd','$cno','$email','$question','$answer','$t')";
 
-			mysql_query($q,$link);
+			mysqli_query($link,$q);
 
 			header("location:register.php?register");
 		}

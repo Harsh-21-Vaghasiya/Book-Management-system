@@ -1,7 +1,7 @@
 <?php
 
-	$link = mysql_connect("localhost","root","");
+	$link = mysqli_connect("localhost","root","");
 
-	mysql_select_db("bms",$link);
+	mysqli_select_db($link,"bms");
 
 ?>

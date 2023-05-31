@@ -67,7 +67,7 @@
 						NULL , '$fnm', '$add', '$pc', '$city', '$state', '$mno', '$rid'
 						)";
 
-			$res=mysql_query($q,$link);
+			$res=mysqli_query($link,$q);
 
 			header("location:order.php?order");
 		}

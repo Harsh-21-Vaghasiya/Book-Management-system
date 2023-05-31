@@ -12,9 +12,9 @@
 					include("includes/connection.php");
 
 					$lq="select * from book order by b_id desc LIMIT 0,9";
-					$lres=mysql_query($lq,$link);
+					$lres=mysqli_query($link,$lq);
 
-					while($lrow=mysql_fetch_assoc($lres))
+					while($lrow=mysqli_fetch_assoc($lres))
 					{
 						echo '<div class="book_box">
 								<a href="book_detail.php?id='.$lrow['b_id'].'">

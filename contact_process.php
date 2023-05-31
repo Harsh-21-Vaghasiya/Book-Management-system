@@ -49,7 +49,7 @@
 
 			$q="insert into contact(c_fnm,c_mno,c_email,c_msg,c_time) values('$fnm','$mno','$email','$msg','$t')";
 
-			mysql_query($q,$link);
+			mysqli_query($link,$q);
 
 			header("location:contact.php");
 		}

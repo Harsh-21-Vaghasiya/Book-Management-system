@@ -7,9 +7,9 @@
 
 	$book_query="select * from book,category where b_cat=cat_id and b_id=$bid";
 
-	$book_res=mysql_query($book_query,$link);
+	$book_res=mysqli_query($link,$book_query);
 
-	$book_row=mysql_fetch_assoc($book_res);
+	$book_row=mysqli_fetch_assoc($book_res);
 ?>
 
 <div id="content">

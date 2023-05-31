@@ -15,9 +15,9 @@
 
 					$blq="select * from book where b_cat=$id";
 
-					$blres=mysql_query($blq,$link);
+					$blres=mysqli_query($link,$blq);
 
-					while($blrow=mysql_fetch_assoc($blres))
+					while($blrow=mysqli_fetch_assoc($blres))
 					{
 						echo '<div class="book_box">
 								<a href="book_detail.php?id='.$blrow['b_id'].'">
