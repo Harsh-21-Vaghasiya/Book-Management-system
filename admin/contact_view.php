@@ -38,11 +38,11 @@
 
                                             $book_q="select * from contact";
 
-                                            $book_res=mysql_query($book_q,$link);
+                                            $book_res=mysqli_query($link,$book_q);
 
                                             $count=1;
 
-                                            while($book_row=mysql_fetch_assoc($book_res))
+                                            while($book_row=mysqli_fetch_assoc($book_res))
                                             {
                                                 echo '<tr class="odd gradeX">
                                                           <td>'.$count.'</td>

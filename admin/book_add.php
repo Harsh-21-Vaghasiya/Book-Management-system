@@ -44,9 +44,9 @@
 
                                                     $cq="select * from category";
 
-                                                    $cres=mysql_query($cq,$link);
+                                                    $cres=mysqli_query($link,$cq);
 
-                                                    while($crow=mysql_fetch_assoc($cres))
+                                                    while($crow=mysqli_fetch_assoc($cres))
                                                     {
                                                         echo '<option value="'.$crow['cat_id'].'">'.$crow['cat_nm'].'</option>';
                                                     }

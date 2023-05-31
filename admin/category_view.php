@@ -34,11 +34,11 @@
 
                                             $cat_q="select * from category";
 
-                                            $cat_res=mysql_query($cat_q,$link);
+                                            $cat_res=mysqli_query($link,$cat_q);
 
                                             $count=1;
 
-                                            while($cat_row=mysql_fetch_assoc($cat_res))
+                                            while($cat_row=mysqli_fetch_assoc($cat_res))
                                             {
                                                 echo '<tr class="odd gradeX">
                                                           <td>'.$count.'</td>

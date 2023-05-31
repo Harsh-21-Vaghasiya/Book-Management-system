@@ -39,11 +39,11 @@
 
                                             $r_q="select * from register";
 
-                                            $r_res=mysql_query($r_q,$link);
+                                            $r_res=mysqli_query($link,$r_q);
 
                                             $count=1;
 
-                                            while($r_row=mysql_fetch_assoc($r_res))
+                                            while($r_row=mysqli_fetch_assoc($r_res))
                                             {
                                                 echo '<tr class="odd gradeX">
                                                           <td>'.$count.'</td>

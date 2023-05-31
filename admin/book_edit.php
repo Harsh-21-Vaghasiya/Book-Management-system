@@ -5,9 +5,9 @@
 
     $cq="select * from book where b_id=".$_GET['id'];
 
-    $res=mysql_query($cq,$link);
+    $res=mysqli_query($link,$cq);
 
-    $crow=mysql_fetch_assoc($res);
+    $crow=mysqli_fetch_assoc($res);
 ?>
 
         <div id="page-wrapper">
@@ -52,9 +52,9 @@
 
                                                     $cq="select * from category";
 
-                                                    $cres=mysql_query($cq,$link);
+                                                    $cres=mysqli_query($link,$cq);
 
-                                                    while($crow=mysql_fetch_assoc($cres))
+                                                    while($crow=mysqli_fetch_assoc($cres))
                                                     {
                                                         echo '<option value="'.$crow['cat_id'].'">'.$crow['cat_nm'].'</option>';
                                                     }

@@ -60,7 +60,7 @@
 
 			$q="insert into book(b_nm,b_cat,b_desc,b_price,b_img,b_time) values('$bnm',$cat,'$desc',$price,'$b_img','$t')";
 
-			$res=mysql_query($q,$link);
+			$res=mysqli_query($link,$q);
 
 			header("location:book_add.php");
 		}

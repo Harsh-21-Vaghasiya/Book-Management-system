@@ -8,9 +8,9 @@
     $q="select * from category
         where cat_id='$id'";
         
-    $res=mysql_query($q,$link);
+    $res=mysqli_query($link,$q);
 
-    $row=mysql_fetch_assoc($res);
+    $row=mysqli_fetch_assoc($res);
 ?>
 
         <div id="page-wrapper">

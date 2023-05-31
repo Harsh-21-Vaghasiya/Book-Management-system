@@ -19,9 +19,9 @@
 		{
 			$q="select * from admin where a_unm='$unm' and a_pwd='$pwd'";
 
-			$res=mysql_query($q,$link);
+			$res=mysqli_query($link,$q);
 
-			$row=mysql_fetch_assoc($res);
+			$row=mysqli_fetch_assoc($res);
 
 			if(!empty($row))
 			{

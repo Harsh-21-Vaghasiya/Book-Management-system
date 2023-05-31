@@ -22,7 +22,7 @@
 
 			$q="insert into category(cat_nm) values('$cat')";
 
-			mysql_query($q,$link);
+			mysqli_query($link,$q);
 
 			header("location:category_add.php");
 		}

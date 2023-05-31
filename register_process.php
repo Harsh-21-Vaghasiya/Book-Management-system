@@ -34,7 +34,7 @@
 		{
 			$_SESSION['error']['email']="Please enter E-Mail Address";
 		}
-		else if(!preg_match("^[a-z0-9_]+[a-z0-9_.]*@[a-z0-9_-]+[a-z0-9_.-]*\.[a-z]{2,5}$",$email))
+		else if (!preg_match('/^([a-z0-9_]+[a-z0-9_.]*@[a-z0-9_-]+[a-z0-9_.-]*\.[a-z]{2,5})$/', $email)) 
 		{
 			$_SESSION['error']['email']="Please Enter Valid E-Mail Address";
 		}

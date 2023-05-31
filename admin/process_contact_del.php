@@ -6,9 +6,9 @@
 
 	$query="delete from contact where c_id =".$_GET['id'];
 
-	$result=mysql_query($query,$link);
+	$result=mysqli_query($link,$query);
 
-	$run=mysql_fetch_assoc($result);
+	$run=mysqli_fetch_assoc($result);
 
 	header("location:contact_view.php");
 
